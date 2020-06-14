@@ -45,6 +45,9 @@ RUN \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
 
+RUN \
+  echo "2 no_wg" >> /etc/iproute2/rt_tables
+
 # add local files
 COPY /root /
 
